@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.008" errors="0" skipped="0" tests="1" name="com.rlm.dam.AppTest">
+<testsuite failures="0" time="0.009" errors="0" skipped="0" tests="1" name="com.rlm.dam.AppTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
@@ -22,7 +22,7 @@
     <property name="basedir" value="/Users/donl/dev/_red_lines_media/redlines_client"/>
     <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/Users/donl/dev/_red_lines_media/redlines_client/target/surefire/surefirebooter7926245413484497001.jar"/>
+    <property name="surefire.real.class.path" value="/Users/donl/dev/_red_lines_media/redlines_client/target/surefire/surefirebooter7353636657987310472.jar"/>
     <property name="java.io.tmpdir" value="/var/folders/c7/c73+OTFQHN8dEdOQUbDFu++++TI/-Tmp-/"/>
     <property name="line.separator" value="
 "/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
-    <property name="sun.java.command" value="/Users/donl/dev/_red_lines_media/redlines_client/target/surefire/surefirebooter7926245413484497001.jar /Users/donl/dev/_red_lines_media/redlines_client/target/surefire/surefire375460622170240967tmp /Users/donl/dev/_red_lines_media/redlines_client/target/surefire/surefire2441476038996095648tmp"/>
+    <property name="sun.java.command" value="/Users/donl/dev/_red_lines_media/redlines_client/target/surefire/surefirebooter7353636657987310472.jar /Users/donl/dev/_red_lines_media/redlines_client/target/surefire/surefire1810707109926306443tmp /Users/donl/dev/_red_lines_media/redlines_client/target/surefire/surefire5237427722791083545tmp"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="apple.awt.CToolkit"/>

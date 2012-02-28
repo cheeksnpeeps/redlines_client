@@ -1,0 +1,55 @@
+!tape
+name: asset details tape
+interactions:
+- recorded: 2012-02-28T22:29:44.267Z
+  request:
+    method: POST
+    uri: http://demo.entermediasoftware.com/media/services/rest/assetdetails.xml
+    headers:
+      Content-Length: '42'
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+      Cookie: JSESSIONID=abcFTC3QdrJd98-Fgfgxt; entermedia.key=adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc
+      Cookie2: $Version=1
+      Host: demo.entermediasoftware.com
+      Proxy-Connection: Keep-Alive
+      User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+    body: ''
+  response:
+    status: 200
+    headers:
+      Content-Type: text/xml
+      Date: Tue, 28 Feb 2012 22:28:41 GMT
+      Server: Resin/3.1.9
+    body: '<?xml version="1.0" encoding="utf-8" ?>
+
+      <rsp stat="ok">
+
+      <property id="id">103</property>
+
+      <property id="sourcepath">originals/videos/artbeats_red_m480p.mov</property>
+
+      <property id="importstatus" valueid="imported">Imported</property>
+
+      <property id="name">artbeats_red_m480p.mov</property>
+
+      <property id="height">480</property>
+
+      <property id="width">853</property>
+
+      <property id="assetcreationdate">2008:10:31 20:26:24</property>
+
+      <property id="assetmodificationdate">2011-07-20 10:40:36 -0400</property>
+
+      <property id="length">127</property>
+
+      <property id="framerate">29.97</property>
+
+      <thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/artbeats_red_m480p.mov/thumb.jpg</thumb>
+
+      <preview>/media/catalogs/public/downloads/converted/cache/originals/videos/artbeats_red_m480p.mov/preview.flv</preview>
+
+      <original>/media/catalogs/public/downloads/originals/originals/videos/artbeats_red_m480p.mov/artbeats_red_m480p.mov</original>
+
+      </rsp>
+
+      '

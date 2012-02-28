@@ -88,6 +88,18 @@ public class SimpleClientTest {
 		response = client.execute(httppost);
 		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
 	}
+	
+	@Betamax(tape = "asset details tape")
+	@Test
+	public void assetDetails() throws Exception{
+		HttpPost httppost = new HttpPost(HOST + PATH + "assetdetails.xml");
+		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+		nvps.add(new BasicNameValuePair("catalogid", PUBLIC_CATALOG));
+		nvps.add(new BasicNameValuePair("id", "103"));
+		httppost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
+		response = client.execute(httppost);
+		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
+	}
 
 	// HELPER METHODS
 	private List<Cookie> getCookies() throws Exception {

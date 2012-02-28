@@ -32,13 +32,17 @@ import betamax.Betamax;
 import betamax.Recorder;
 
 public class SimpleClientTest {
+	private static final String PUBLIC_CATALOG = "media/catalogs/public";
 	private static final String PATH = "/media/services/rest/";
 	private static final String HOST = "http://demo.entermediasoftware.com";
-	private static boolean isPrintOn = false;
+	private static boolean isPrintOn = true;
 	private static List<Cookie> cookies = null;
 
 	private DefaultHttpClient client = null;
 	private HttpResponse response = null;
+	
+	@Rule
+	public Recorder recorder = new Recorder();
 
 	@Before
 	public void initSecurityCookies() throws Exception {
@@ -64,8 +68,7 @@ public class SimpleClientTest {
 		}
 	}
 
-	@Rule
-	public Recorder recorder = new Recorder();
+	
 
 	@Betamax(tape = "my tape")
 	@Test
@@ -74,9 +77,19 @@ public class SimpleClientTest {
 		response = client.execute(getmethod);
 		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
 	}
+	
+	@Betamax(tape = "asset search tape")
+	@Test
+	public void assetSearch() throws Exception{
+		HttpPost httppost = new HttpPost(HOST + PATH + "assetsearch.xml");
+		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+		nvps.add(new BasicNameValuePair("catalogid", PUBLIC_CATALOG));
+		httppost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
+		response = client.execute(httppost);
+		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
+	}
 
 	// HELPER METHODS
-
 	private List<Cookie> getCookies() throws Exception {
 		if (cookies == null)
 			cookies = login();

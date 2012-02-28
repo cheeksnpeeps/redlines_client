@@ -1,0 +1,56 @@
+!tape
+name: asset search tape
+interactions:
+- recorded: 2012-02-28T22:25:19.632Z
+  request:
+    method: POST
+    uri: http://demo.entermediasoftware.com/media/services/rest/assetsearch.xml
+    headers:
+      Content-Length: '35'
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+      Cookie: JSESSIONID=abcndamMPHnoOfk6fegxt; entermedia.key=adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc
+      Cookie2: $Version=1
+      Host: demo.entermediasoftware.com
+      Proxy-Connection: Keep-Alive
+      User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+    body: ''
+  response:
+    status: 200
+    headers:
+      Content-Type: text/xml
+      Date: Tue, 28 Feb 2012 22:24:16 GMT
+      Server: Resin/3.1.9
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<rsp stat=\"ok\">\n<hits sessionid=\"hitsmedia/catalogs/public\" page=\"1\" pages=\"2\" totalsize=\"31\">\n<hit id=\"103\" name=\"artbeats_red_m480p.mov\" sourcepath=\"originals/videos/artbeats_red_m480p.mov\"\
+      \  fileformatid=\"mov\" fileformat=\"MOV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/artbeats_red_m480p.mov/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/artbeats_red_m480p.mov/preview.flv</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/videos/artbeats_red_m480p.mov/artbeats_red_m480p.mov</original>\n</hit>\n\n<hit id=\"102\" name=\"VDTestFile.mp4\" sourcepath=\"users/admin/VDTestFile.mp4\"  fileformatid=\"mp4\" fileformat=\"\
+      MPEG 4 mp4\" extrakeywords=\"Test File\" >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/users/admin/VDTestFile.mp4/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/converted/cache/users/admin/VDTestFile.mp4/preview.flv</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/users/admin/VDTestFile.mp4/VDTestFile.mp4</original>\n</hit>\n\n<hit id=\"104\" name=\"bbc_earth_m480p.mov\" sourcepath=\"originals/videos/bbc_earth_m480p.mov\"  fileformatid=\"mov\" fileformat=\"\
+      MOV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/bbc_earth_m480p.mov/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/bbc_earth_m480p.mov/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/bbc_earth_m480p.mov/bbc_earth_m480p.mov</original>\n\
+      </hit>\n\n<hit id=\"105\" name=\"running_the_sahara_m480p.mov\" sourcepath=\"originals/videos/running_the_sahara_m480p.mov\"  fileformatid=\"mov\" fileformat=\"MOV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/running_the_sahara_m480p.mov/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/running_the_sahara_m480p.mov/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/running_the_sahara_m480p.mov/running_the_sahara_m480p.mov</original>\n\
+      </hit>\n\n<hit id=\"108\" name=\"EnterMedia_EMTube.mp4\" sourcepath=\"originals/videos/EnterMedia_EMTube.mp4\"  fileformatid=\"mp4\" fileformat=\"MPEG 4 mp4\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/EnterMedia_EMTube.mp4/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/EnterMedia_EMTube.mp4/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/EnterMedia_EMTube.mp4/EnterMedia_EMTube.mp4</original>\n</hit>\n\
+      \n<hit id=\"109\" name=\"em500testvideo.flv\" sourcepath=\"originals/videos/em500testvideo.flv\"  fileformatid=\"flv\" fileformat=\"FLV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/em500testvideo.flv/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/em500testvideo.flv/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/em500testvideo.flv/em500testvideo.flv</original>\n</hit>\n\n\
+      <hit id=\"111\" name=\"Slideshow.mp4\" sourcepath=\"originals/videos/Slideshow.mp4\"  fileformatid=\"mp4\" fileformat=\"MPEG 4 mp4\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/Slideshow.mp4/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/Slideshow.mp4/preview.flv</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/videos/Slideshow.mp4/Slideshow.mp4</original>\n</hit>\n\n<hit id=\"112\" name=\"Boquet.jpg\" sourcepath=\"originals/photos/Boquet.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Boquet.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Boquet.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/Boquet.jpg/Boquet.jpg</original>\n</hit>\n\n<hit id=\"113\" name=\"Bug1.jpg\"\
+      \ sourcepath=\"originals/photos/Bug1.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Bug1.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Bug1.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/Bug1.jpg/Bug1.jpg</original>\n</hit>\n\n<hit id=\"114\" name=\"BlackClaw.jpg\" sourcepath=\"originals/photos/BlackClaw.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/BlackClaw.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/BlackClaw.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/BlackClaw.jpg/BlackClaw.jpg</original>\n</hit>\n\n<hit id=\"115\" name=\"\
+      BirdnFish.jpg\" sourcepath=\"originals/photos/BirdnFish.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/BirdnFish.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/BirdnFish.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/BirdnFish.jpg/BirdnFish.jpg</original>\n</hit>\n\n<hit id=\"116\" name=\"House.jpg\" sourcepath=\"originals/photos/House.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/House.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/House.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/House.jpg/House.jpg</original>\n</hit>\n\n<hit id=\"117\" name=\"Waves.jpg\"\
+      \ sourcepath=\"originals/photos/Waves.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Waves.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Waves.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/Waves.jpg/Waves.jpg</original>\n</hit>\n\n<hit id=\"121\" name=\"OrangeStreetRoof.jpg\" sourcepath=\"originals/photos/OrangeStreetRoof.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"\
+      \  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/OrangeStreetRoof.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/OrangeStreetRoof.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/OrangeStreetRoof.jpg/OrangeStreetRoof.jpg</original>\n\
+      </hit>\n\n<hit id=\"122\" name=\"Street.jpg\" sourcepath=\"originals/photos/Street.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Street.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Street.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/Street.jpg/Street.jpg</original>\n</hit>\n\n<hit id=\"123\" name=\"Concert.jpg\" sourcepath=\"originals/photos/Concert.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Concert.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Concert.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/Concert.jpg/Concert.jpg</original>\n</hit>\n\n<hit id=\"124\" name=\"Chimes.jpg\"\
+      \ sourcepath=\"originals/photos/Chimes.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Chimes.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Chimes.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/Chimes.jpg/Chimes.jpg</original>\n</hit>\n\n<hit id=\"125\" name=\"BlueBus.jpg\" sourcepath=\"originals/photos/BlueBus.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/BlueBus.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/BlueBus.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/BlueBus.jpg/BlueBus.jpg</original>\n</hit>\n\n<hit id=\"126\" name=\"FighterJet.jpg\"\
+      \ sourcepath=\"originals/photos/FighterJet.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/FighterJet.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/FighterJet.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/FighterJet.jpg/FighterJet.jpg</original>\n</hit>\n\n<hit id=\"127\" name=\"CoffieCup.jpg\" sourcepath=\"originals/photos/CoffieCup.jpg\"  fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\
+      \t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/CoffieCup.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/CoffieCup.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/CoffieCup.jpg/CoffieCup.jpg</original>\n\
+      </hit>\n\n</hits>\n</rsp>\n"

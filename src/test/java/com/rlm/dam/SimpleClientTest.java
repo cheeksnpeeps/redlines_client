@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.ProxySelector;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,13 +17,19 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.conn.routing.HttpRoutePlanner;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.ProxySelectorRoutePlanner;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+
+import betamax.Betamax;
+import betamax.Recorder;
 
 public class SimpleClientTest {
 	private static final String PATH = "/media/services/rest/";
@@ -36,6 +43,10 @@ public class SimpleClientTest {
 	@Before
 	public void initSecurityCookies() throws Exception {
 		client = new DefaultHttpClient();
+		HttpRoutePlanner routePlanner = new ProxySelectorRoutePlanner(client
+				.getConnectionManager().getSchemeRegistry(),
+				ProxySelector.getDefault());
+		client.setRoutePlanner(routePlanner);
 		List<Cookie> securityCookies = getCookies();
 		for (Cookie cookie : securityCookies) {
 			client.getCookieStore().addCookie(cookie);
@@ -53,15 +64,19 @@ public class SimpleClientTest {
 		}
 	}
 
+	@Rule
+	public Recorder recorder = new Recorder();
+
+	@Betamax(tape = "my tape")
 	@Test
 	public void testListCatalogs() throws ClientProtocolException, IOException {
 		HttpGet getmethod = new HttpGet(HOST + PATH + "listcatalogs.xml");
 		response = client.execute(getmethod);
 		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
 	}
-	
-	//HELPER METHODS
-	
+
+	// HELPER METHODS
+
 	private List<Cookie> getCookies() throws Exception {
 		if (cookies == null)
 			cookies = login();

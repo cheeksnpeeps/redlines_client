@@ -37,5 +37,17 @@
 			<artifactId>betamax</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy</artifactId>
+			<version>1.8.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.objectweb.asm</groupId>
+			<artifactId>com.springsource.org.objectweb.asm</artifactId>
+			<version>3.2.0</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 </project>

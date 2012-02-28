@@ -1,0 +1,28 @@
+!tape
+name: my tape
+interactions:
+- recorded: 2012-02-28T21:45:36.983Z
+  request:
+    method: GET
+    uri: http://demo.entermediasoftware.com/media/services/rest/listcatalogs.xml
+    headers:
+      Cookie: JSESSIONID=abcGiWku19wWQgXS-6fxt; entermedia.key=adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc
+      Cookie2: $Version=1
+      Host: demo.entermediasoftware.com
+      Proxy-Connection: Keep-Alive
+      User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+  response:
+    status: 200
+    headers:
+      Content-Type: text/xml
+      Date: Tue, 28 Feb 2012 21:44:33 GMT
+      Server: Resin/3.1.9
+    body: '<?xml version="1.0" encoding="utf-8" ?>
+
+      <rsp stat="ok">
+
+      <catalog id="media/catalogs/public">Default</catalog>
+
+      </rsp>
+
+      '

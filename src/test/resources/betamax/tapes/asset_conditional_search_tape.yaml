@@ -1,0 +1,27 @@
+!tape
+name: asset conditional search tape
+interactions:
+- recorded: 2012-02-29T16:34:59.656Z
+  request:
+    method: POST
+    uri: http://demo.entermediasoftware.com/media/services/rest/assetsearch.xml
+    headers:
+      Content-Length: '111'
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+      Cookie: JSESSIONID=abcjTu1ut0cvH93cF9jxt; entermedia.key=adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc
+      Cookie2: $Version=1
+      Host: demo.entermediasoftware.com
+      Proxy-Connection: Keep-Alive
+      User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+    body: ''
+  response:
+    status: 200
+    headers:
+      Content-Type: text/xml
+      Date: Wed, 29 Feb 2012 16:33:53 GMT
+      Server: Resin/3.1.9
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<rsp stat=\"ok\">\n<hits sessionid=\"hitsmedia/catalogs/public\" page=\"1\" pages=\"1\" totalsize=\"2\">\n<hit id=\"103\" name=\"artbeats_red_m480p.mov\" sourcepath=\"originals/videos/artbeats_red_m480p.mov\"\
+      \  fileformatid=\"mov\" fileformat=\"MOV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/artbeats_red_m480p.mov/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/artbeats_red_m480p.mov/preview.flv</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/videos/artbeats_red_m480p.mov/artbeats_red_m480p.mov</original>\n</hit>\n\n<hit id=\"102\" name=\"VDTestFile.mp4\" sourcepath=\"users/admin/VDTestFile.mp4\"  fileformatid=\"mp4\" fileformat=\"\
+      MPEG 4 mp4\" extrakeywords=\"Test File\" >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/users/admin/VDTestFile.mp4/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/converted/cache/users/admin/VDTestFile.mp4/preview.flv</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/users/admin/VDTestFile.mp4/VDTestFile.mp4</original>\n</hit>\n\n</hits>\n</rsp>\n"

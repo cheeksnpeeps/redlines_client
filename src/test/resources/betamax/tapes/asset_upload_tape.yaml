@@ -1,0 +1,23 @@
+!tape
+name: asset upload tape
+interactions:
+- recorded: 2012-02-29T18:00:45.692Z
+  request:
+    method: POST
+    uri: http://demo.entermediasoftware.com/media/services/rest/upload.xml?catalogid=media/catalogs/public
+    headers:
+      Content-Length: '1857476'
+      Content-Type: multipart/form-data; boundary=j97YmtwR7Fvb9ExyHlqBSeAKA77OUdqPPGW0
+      Cookie: JSESSIONID=abc8UVK_lWvF28HFbrkxt; entermedia.key=adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc
+      Cookie2: $Version=1
+      Host: demo.entermediasoftware.com
+      Proxy-Connection: Keep-Alive
+      User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+    body: ''
+  response:
+    status: 200
+    headers:
+      Content-Type: text/xml
+      Date: Wed, 29 Feb 2012 17:59:38 GMT
+      Server: Resin/3.1.9
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<rsp stat=\"ok\">\n\t<asset id=\"134\" sourcepath=\"users/admin/testasset_134.jpg\"/>\n</rsp>\n"

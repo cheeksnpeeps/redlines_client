@@ -1,0 +1,33 @@
+!tape
+name: search tape
+interactions:
+- recorded: 2012-02-29T18:02:35Z
+  request:
+    method: POST
+    uri: http://demo.entermediasoftware.com/media/services/rest/search.xml
+    headers:
+      Content-Length: '51'
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+      Cookie: JSESSIONID=abce1JcRxkM0dhhQHrkxt; entermedia.key=adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc
+      Cookie2: $Version=1
+      Host: demo.entermediasoftware.com
+      Proxy-Connection: Keep-Alive
+      User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+    body: ''
+  response:
+    status: 200
+    headers:
+      Content-Type: text/xml
+      Date: Wed, 29 Feb 2012 18:01:28 GMT
+      Server: Resin/3.1.9
+    body: '<?xml version="1.0" encoding="utf-8" ?>
+
+      <rsp stat="ok">
+
+      <hit  enabled="true"  firstName="Rachel"  id="testuser"  lastName="Mellow"  mailingsameasoffice="false"  screenname="RachelM"  userName="testuser"  >
+
+      </hit><hit  email="support@openedit.org"  enabled="true"  firstName="The"  id="admin"  lastName="Administrator"  mailingsameasoffice="false"  mailingcountry="237"  officecountry="237"  screenname="admin"  userName="admin"  >
+
+      </hit></rsp>
+
+      '

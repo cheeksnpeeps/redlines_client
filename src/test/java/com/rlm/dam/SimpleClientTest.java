@@ -3,18 +3,17 @@ package com.rlm.dam;
 import static org.junit.Assert.assertEquals;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.ProxySelector;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
@@ -27,11 +26,13 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.routing.HttpRoutePlanner;
 import org.apache.http.cookie.Cookie;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.ProxySelectorRoutePlanner;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
-import org.apache.xerces.jaxp.SAXParserImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -39,8 +40,6 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 import betamax.Betamax;
 import betamax.Recorder;
@@ -106,6 +105,34 @@ public class SimpleClientTest {
 		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
 	}
 
+	@Betamax(tape = "asset conditional search tape")
+	@Test
+	public void assetConditionalSearch() throws Exception {
+		HttpPost httppost = new HttpPost(HOST + PATH + "assetsearch.xml");
+		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+		nvps.add(new BasicNameValuePair("catalogid", PUBLIC_CATALOG));
+		nvps.add(new BasicNameValuePair("field", "id"));
+		nvps.add(new BasicNameValuePair("id.value", "102"));
+		nvps.add(new BasicNameValuePair("operation", "exact"));
+		nvps.add(new BasicNameValuePair("field", "id"));
+		nvps.add(new BasicNameValuePair("id.value", "103"));
+		nvps.add(new BasicNameValuePair("operation", "exact"));
+		httppost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
+		response = client.execute(httppost);
+		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
+	}
+
+	@Test
+	public void listCategories() throws Exception {
+		HttpPost httppost = new HttpPost(HOST + PATH + "listcategories.xml");
+		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+		nvps.add(new BasicNameValuePair("catalogid", PUBLIC_CATALOG));
+		nvps.add(new BasicNameValuePair("parentcategoryid", "index"));
+		httppost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
+		response = client.execute(httppost);
+		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
+	}
+
 	@Betamax(tape = "asset details tape")
 	@Test
 	public void assetDetails() throws Exception {
@@ -142,8 +169,34 @@ public class SimpleClientTest {
 		response = client.execute(httppost);
 		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
 		String name = getValueFromXML(response.getEntity().getContent(), "name");
-		
+
 		assertEquals(updatedName, name);
+	}
+
+	@Betamax(tape = "search tape")
+	@Test
+	public void search() throws Exception {
+		HttpPost httppost = new HttpPost(HOST + PATH + "search.xml");
+		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+		nvps.add(new BasicNameValuePair("catalogid", PUBLIC_CATALOG));
+		nvps.add(new BasicNameValuePair("searchtype", "user"));
+		httppost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
+		response = client.execute(httppost);
+		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
+	}
+
+	@Betamax(tape = "asset upload tape")
+	@Test
+	public void uploadFile() throws Exception {
+		HttpPost httppost = new HttpPost(HOST + PATH + "upload.xml?catalogid=" + PUBLIC_CATALOG);
+		File f = new File("etc/testasset.jpg");
+
+		MultipartEntity entity = new MultipartEntity();
+		entity.addPart("sourcepath", new StringBody("users/admin/"));
+		entity.addPart("file", new FileBody(f, f.getName()));
+		httppost.setEntity(entity);
+		response = client.execute(httppost);
+		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());
 	}
 
 	// HELPER METHODS

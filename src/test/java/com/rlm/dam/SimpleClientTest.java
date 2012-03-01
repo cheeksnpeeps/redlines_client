@@ -153,7 +153,7 @@ public class SimpleClientTest {
 		HttpPost httpSevePost = new HttpPost(HOST + PATH + "saveassetdetails.xml");
 		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
 		nvps.add(new BasicNameValuePair("catalogid", PUBLIC_CATALOG));
-		nvps.add(new BasicNameValuePair("id", "103"));
+		nvps.add(new BasicNameValuePair("id", "105"));
 		nvps.add(new BasicNameValuePair("field", "name"));
 		nvps.add(new BasicNameValuePair("name.value", updatedName));
 		httpSevePost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
@@ -164,7 +164,7 @@ public class SimpleClientTest {
 		HttpPost httppost = new HttpPost(HOST + PATH + "assetdetails.xml");
 		nvps = new ArrayList<NameValuePair>();
 		nvps.add(new BasicNameValuePair("catalogid", PUBLIC_CATALOG));
-		nvps.add(new BasicNameValuePair("id", "103"));
+		nvps.add(new BasicNameValuePair("id", "105"));
 		httppost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
 		response = client.execute(httppost);
 		assertEquals(HttpStatus.SC_OK, response.getStatusLine().getStatusCode());

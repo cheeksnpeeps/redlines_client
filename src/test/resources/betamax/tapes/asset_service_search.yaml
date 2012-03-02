@@ -1,0 +1,60 @@
+!tape
+name: asset service search
+interactions:
+- recorded: 2012-03-02T04:57:43.262Z
+  request:
+    method: POST
+    uri: http://demo.entermediasoftware.com/media/services/rest/assetsearch.xml
+    headers:
+      Content-Length: '35'
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+      Cookie: JSESSIONID=abcYQDIoupSev5N8bXrxt; entermedia.key=adminmd5421c0af185908a6c0c40d50fd5e3f16760d5580bc
+      Cookie2: $Version=1
+      Host: demo.entermediasoftware.com
+      Proxy-Connection: Keep-Alive
+      User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+    body: ''
+  response:
+    status: 200
+    headers:
+      Content-Type: text/xml
+      Date: Fri, 02 Mar 2012 04:56:26 GMT
+      Server: Resin/3.1.9
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<rsp stat=\"ok\">\n<hits sessionid=\"hitsmedia/catalogs/public\" page=\"1\" pages=\"2\" totalsize=\"35\">\n<hit id=\"120\" name=\"CrysChris.jpg\" sourcepath=\"originals/photos/CrysChris.jpg\" assettypeid=\"\
+      photo\" assettype=\"Photos\" fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/CrysChris.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/CrysChris.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/CrysChris.jpg/CrysChris.jpg</original>\n</hit>\n\n<hit id=\"119\" name=\"SownFlowers.jpg\" sourcepath=\"originals/photos/SownFlowers.jpg\" assettypeid=\"photo\" assettype=\"Photos\"\
+      \ fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/SownFlowers.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/SownFlowers.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/SownFlowers.jpg/SownFlowers.jpg</original>\n</hit>\n\n<hit id=\"118\" name=\"SurfferGirl.jpg\" sourcepath=\"originals/photos/SurfferGirl.jpg\" assettypeid=\"photo\" assettype=\"Photos\"\
+      \ fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/SurfferGirl.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/SurfferGirl.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/SurfferGirl.jpg/SurfferGirl.jpg</original>\n</hit>\n\n<hit id=\"114\" name=\"BlackClaw.jpg\" sourcepath=\"originals/photos/BlackClaw.jpg\" assettypeid=\"photo\" assettype=\"Photos\"\
+      \ fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/BlackClaw.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/BlackClaw.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/BlackClaw.jpg/BlackClaw.jpg</original>\n</hit>\n\n<hit id=\"112\" name=\"Boquet.jpg\" sourcepath=\"originals/photos/Boquet.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"\
+      jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Boquet.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Boquet.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/Boquet.jpg/Boquet.jpg</original>\n\
+      </hit>\n\n<hit id=\"110\" name=\"20400636.mov\" sourcepath=\"originals/videos/20400636.mov\" assettypeid=\"video\" assettype=\"Videos\" fileformatid=\"mov\" fileformat=\"MOV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/20400636.mov/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/20400636.mov/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/20400636.mov/20400636.mov</original>\n</hit>\n\n<hit id=\"109\" name=\"\
+      em500testvideo.flv\" sourcepath=\"originals/videos/em500testvideo.flv\" assettypeid=\"video\" assettype=\"Videos\" fileformatid=\"flv\" fileformat=\"FLV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/em500testvideo.flv/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/em500testvideo.flv/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/em500testvideo.flv/em500testvideo.flv</original>\n</hit>\n\n\
+      <hit id=\"111\" name=\"Slideshow.mp4\" sourcepath=\"originals/videos/Slideshow.mp4\" assettypeid=\"video\" assettype=\"Videos\" fileformatid=\"mp4\" fileformat=\"MPEG 4 mp4\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/Slideshow.mp4/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/Slideshow.mp4/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/Slideshow.mp4/Slideshow.mp4</original>\n</hit>\n\n<hit id=\"102\"\
+      \ name=\"VDTestFile.mp4\" sourcepath=\"users/admin/VDTestFile.mp4\" assettypeid=\"video\" assettype=\"Videos\" fileformatid=\"mp4\" fileformat=\"MPEG 4 mp4\" extrakeywords=\"Test File\" >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/users/admin/VDTestFile.mp4/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/users/admin/VDTestFile.mp4/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/users/admin/VDTestFile.mp4/VDTestFile.mp4</original>\n</hit>\n\n<hit id=\"115\" name=\"\
+      BirdnFish.jpg\" sourcepath=\"originals/photos/BirdnFish.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/BirdnFish.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/BirdnFish.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/BirdnFish.jpg/BirdnFish.jpg</original>\n</hit>\n\n<hit id=\"116\" name=\"\
+      House.jpg\" sourcepath=\"originals/photos/House.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/House.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/House.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/House.jpg/House.jpg</original>\n</hit>\n\n<hit id=\"117\" name=\"Waves.jpg\" sourcepath=\"originals/photos/Waves.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"jpg\"\
+      \ fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Waves.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Waves.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/Waves.jpg/Waves.jpg</original>\n\
+      </hit>\n\n<hit id=\"121\" name=\"OrangeStreetRoof.jpg\" sourcepath=\"originals/photos/OrangeStreetRoof.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/OrangeStreetRoof.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/OrangeStreetRoof.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/OrangeStreetRoof.jpg/OrangeStreetRoof.jpg</original>\n</hit>\n\n\
+      <hit id=\"104\" name=\"bbc_earth_m480p.mov\" sourcepath=\"originals/videos/bbc_earth_m480p.mov\" assettypeid=\"video\" assettype=\"Videos\" fileformatid=\"mov\" fileformat=\"MOV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/bbc_earth_m480p.mov/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/bbc_earth_m480p.mov/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/bbc_earth_m480p.mov/bbc_earth_m480p.mov</original>\n</hit>\n\
+      \n<hit id=\"107\" name=\"driveby_truckers_m480p.mov\" sourcepath=\"originals/videos/driveby_truckers_m480p.mov\" assettypeid=\"video\" assettype=\"Videos\" fileformatid=\"mov\" fileformat=\"MOV\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/driveby_truckers_m480p.mov/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/driveby_truckers_m480p.mov/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/driveby_truckers_m480p.mov/driveby_truckers_m480p.mov</original>\n\
+      </hit>\n\n<hit id=\"108\" name=\"EnterMedia_EMTube.mp4\" sourcepath=\"originals/videos/EnterMedia_EMTube.mp4\" assettypeid=\"video\" assettype=\"Videos\" fileformatid=\"mp4\" fileformat=\"MPEG 4 mp4\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/videos/EnterMedia_EMTube.mp4/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/converted/cache/originals/videos/EnterMedia_EMTube.mp4/preview.flv</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/videos/EnterMedia_EMTube.mp4/EnterMedia_EMTube.mp4</original>\n</hit>\n\
+      \n<hit id=\"129\" name=\"RedFlower.jpg\" sourcepath=\"originals/photos/RedFlower.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/RedFlower.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/RedFlower.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/RedFlower.jpg/RedFlower.jpg</original>\n</hit>\n\n<hit id=\"131\" name=\"\
+      Bird.jpg\" sourcepath=\"originals/photos/Bird.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Bird.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Bird.jpg/image.jpg</preview>\n\
+      \t<original>/media/catalogs/public/downloads/originals/originals/photos/Bird.jpg/Bird.jpg</original>\n</hit>\n\n<hit id=\"130\" name=\"FenceDog.jpg\" sourcepath=\"originals/photos/FenceDog.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"\
+      jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/FenceDog.jpg/thumb.jpg</thumb>\n\t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/FenceDog.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/FenceDog.jpg/FenceDog.jpg</original>\n\
+      </hit>\n\n<hit id=\"128\" name=\"Camera.jpg\" sourcepath=\"originals/photos/Camera.jpg\" assettypeid=\"photo\" assettype=\"Photos\" fileformatid=\"jpg\" fileformat=\"JPG\"  >\n\t<thumb>/media/catalogs/public/downloads/preview/thumb/originals/photos/Camera.jpg/thumb.jpg</thumb>\n\
+      \t<preview>/media/catalogs/public/downloads/preview/large/originals/photos/Camera.jpg/image.jpg</preview>\n\t<original>/media/catalogs/public/downloads/originals/originals/photos/Camera.jpg/Camera.jpg</original>\n</hit>\n\n</hits>\n</rsp>\n"
